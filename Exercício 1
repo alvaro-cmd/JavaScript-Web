@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Curso JavaScript</title>
+  </head>
+  <body>
+    <div id='app'>
+      <div  class = "box"></div>
+    </div>
+      <script>
+        //Botão
+          //Seleciona div e cria botão
+            var mydiv = document.querySelector("#app");
+            var btnElement = document.createElement('button');
+            mydiv.appendChild(btnElement);
+          //Crio texto para o botão
+            var text = document.createTextNode("Clique aqui");
+            btnElement.appendChild(text);
+        //Elemento
+            //Crio elemento box
+            btnElement.onclick = function criaElemento(){
+            var boxElement = document.createElement("div");
+            boxElement.className = "child"; 
+            mydiv.appendChild(boxElement);
+
+            //Crio estilo do elemento
+            boxElement.style.width = 100;
+            boxElement.style.height = 100;
+            boxElement.style.backgroundColor = '#f00';
+      }
+      
+      </script>
+
+    </body>
+</html>
